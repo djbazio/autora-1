@@ -51,8 +51,8 @@ class BottomBar extends Component {
                 <div id="bottom-bar-inner" className="container">
                     <div className="bottom-bar-inner-wrap">
                         <div className="bottom-bar-content">
-                            <div id="copyright">© <span className="text">Construction Template. Design <Link to="#"
-                                        className="text-accent">by @Niche_Theme</Link> </span>
+                            <div id="copyright">© <span className="text">TNN Company Limited <Link to="#"
+                                        className="text-accent">by JaroenDeeKhuen 2023 </Link> </span>
                             </div>
                         </div>{/* /.bottom-bar-content */}
                         <div className="bottom-bar-menu">

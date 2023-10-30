@@ -20,7 +20,7 @@ class Header extends Component {
                             <span />
                         </div>
                         <nav id="main-nav" className="main-nav">
-                            <ul id="menu-primary-menu" className="menu">
+                            {/* <ul id="menu-primary-menu" className="menu">
                                 {
                                     menus.map(data => (
                                         <li className={data.name === this.props.data.names ? "menu-item menu-item-has-children current-menu-item" : "menu-item menu-item-has-children"} key={data.id}>
@@ -35,6 +35,43 @@ class Header extends Component {
                                         </li>
                                     ))
                                 }
+                            </ul> */}
+                            <ul id="menu-primary-menu" className="menu">
+                                {menus.map(data => (
+                                    <li
+                                        className={
+                                            data.name === this.props.data.names
+                                                ? "menu-item menu-item-has-children current-menu-item"
+                                                : "menu-item menu-item-has-children"
+                                        }
+                                        key={data.id}
+                                    >
+                                        <Link to={data.namesub ? "#" : data.links}>{data.name}</Link>
+                                        {data.namesub && (
+                                            <ul className="sub-menu">
+                                                {data.namesub.map(submenu => (
+                                                    <li
+                                                        className={
+                                                            location.pathname === submenu.links
+                                                                ? "menu-item current-item"
+                                                                : "menu-item"
+                                                        }
+                                                        key={submenu.id}
+                                                    >
+                                                        <Link
+                                                            to={submenu.links}
+                                                            onClick={() => {
+                                                                window.location.href = submenu.links;
+                                                            }}
+                                                        >
+                                                            {submenu.sub}
+                                                        </Link>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </li>
+                                ))}
                             </ul>
                         </nav>
                         <div id="header-search">

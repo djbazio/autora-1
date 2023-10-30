@@ -3,18 +3,18 @@ const menus = [
         id: 1,
         name: 'Home',
         links: '/',
-        // namesub: [
-        //     {
-        //         id: 1,
-        //         sub: 'Home 01',
-        //         links: '/'
-        //     },
-        //     {
-        //         id: 2,
-        //         sub: 'Home 02',
-        //         links: '/home-02'
-        //     },
-        // ]
+        namesub: [
+            {
+                id: 1,
+                sub: 'Home',
+                links: '/'
+            },
+        //     // {
+        //     //     id: 2,
+        //     //     sub: 'Home 02',
+        //     //     links: '/home-02'
+        //     // },
+        ]
     },
     {
         id: 2,
@@ -62,20 +62,20 @@ const menus = [
         name: 'Projects',
         namesub: [
             {
-                id: 1,
+                id: 0,
                 sub: 'Projects',
                 links: '/project'
             },
-            {
-                id: 2,
-                sub: 'Projects Full Width',
-                links: '/project-full-width'
-            },
-            {
-                id: 3,
-                sub: 'Projects Detail',
-                links: '/project-detail'
-            }
+            // {
+            //     id: 2,
+            //     sub: 'Projects Full Width',
+            //     links: '/project-full-width'
+            // },
+            // {
+            //     id: 2,
+            //     sub: 'Projects Detail',
+            //     links: '/project-detail'
+            // }
         ],
     },
     {
